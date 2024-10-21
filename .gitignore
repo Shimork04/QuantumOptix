@@ -1,0 +1,27 @@
+# Ignore node_modules directories in each microservice
+api-gateway/node_modules/
+session-service/node_modules/
+data-service/node_modules/
+queue-service/node_modules/
+consumer-service/node_modules/
+flag-service/node_modules/
+security-service/node_modules/
+
+# Ignore other OS-specific or editor-specific files
+.DS_Store         # MacOS
+Thumbs.db         # Windows
+*.log             # Log files
+.env              # Environment variables (for sensitive information)
+*.env             # Environment files
+
+# Ignore npm debug files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore coverage folder created by testing tools
+coverage/
+
+# Ignore IDE/Editor files
+.idea/            # WebStorm/PhpStorm
+.vscode/          # Visual Studio Code
