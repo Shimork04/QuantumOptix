@@ -68,7 +68,7 @@ app.delete("/session/:channelId", async (req, res) => {
   }
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.SESSIONSERVICE_PORT || 4000;
 //starting the session - service 
 app.listen( port, () =>{
     console.log(`Session Management Service running sucessfully on port ${port}`)
