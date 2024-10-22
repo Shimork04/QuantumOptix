@@ -1,13 +1,20 @@
 const mongoose = require("mongoose");
 
-const sessionSchema = new mongoose.Schema(
-  {
-    channelId: { type: String, unique: true, required: true },
-    initialHeader: { type: Object, required: true },
-    createdAt: { type: Date, default: Date.now },
+const sessionSchema = new mongoose.Schema({
+  channelId: {
+    type: String,
+    required: true,
+    unique: true
   },
-  { timestamps: { createdAt: true, updatedAt: true } }
-);
+  initialHeader: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
 
 const Session = mongoose.model("Session", sessionSchema);
 
